@@ -1,0 +1,9 @@
+<div class="container">
+	<h1><%= I18n.t("menus.editServ") %></h1>
+
+	<%= render 'form' %>
+
+	<button class="btn btn-secondary btn-xs" type="button"><%= link_to I18n.t("links.show"), @service %></button> |
+	<button class="btn btn-secondary btn-xs" type="button"><%= link_to I18n.t("links.back"), services_path %></button>
+</div>
+

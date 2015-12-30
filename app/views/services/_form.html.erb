@@ -1,0 +1,70 @@
+<%= form_for(@service) do |f| %>
+  <% if @service.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@service.errors.count, I18n.t("links.error"))%> <%= I18n.t("general.validationerror") %>:</h2>
+
+      <ul>
+      <% @service.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container">
+  <!--fieldset>
+    <div class="control-group">
+    <%= f.label :technician, class: "control-label" %>
+      <div class="controls">
+        <%= f.collection_select(:technician_id, @technicians, :id, :name) %>
+      </div>
+      <%= f.label :date, class: "control-label" %>
+      <div class="controls">
+        <%= f.date_select :date %> 
+      </div>
+      <%= f.label :time, class: "control-label" %>
+      <div class="controls">
+        <%= f.time_select :time %> 
+      </div>
+      <%= f.label :client, class: "control-label" %>
+      <div class="controls">
+        <%= f.collection_select(:client_id, @clients, :id, :compname) %>
+      </div>
+      <%= f.label :description, class: "control-label" %>
+      <div class="controls">
+        <%= f.text_area :description %> 
+      </div>
+      <div class="form-actions">
+        <%= f.submit %></ br> 
+      </div>
+    </div-->
+
+  </fieldset>
+
+    <div class="field">
+      <%= f.label :technician %><br>
+      <%#= f.text_field :technician_id %>
+      <%= f.collection_select(:technician_id, @technicians, :id, :name) %>
+    </div>
+    <div class="field">
+      <%= f.label :date %><br>
+      <%= f.date_select :date %>
+    </div>
+    <div class="field">
+      <%= f.label :time %><br>
+      <%= f.time_select :time %>
+    </div>
+    <div class="field">
+      <%= f.label :client %><br>
+      <%#= f.text_field :client_id %>
+      <%= f.collection_select(:client_id, @clients, :id, :compname) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :description %><br>
+      <%= f.text_area :description %>
+    </div>
+    <div class="actions">
+      <%= f.submit class: 'btn btn-default', type: 'submit' %>
+    </div>
+  </div>
+<% end %>

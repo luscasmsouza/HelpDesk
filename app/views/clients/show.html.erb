@@ -1,0 +1,21 @@
+<div class="container">
+	<p id="notice"><%= notice %></p>
+
+	<p>
+	  <strong><%= I18n.t("activerecord.attributes.client.compname") %></strong>
+	  <%= @client.compname %>
+	</p>
+
+	<p>
+	  <strong><%= I18n.t("activerecord.attributes.client.address") %></strong>
+	  <%= @client.address %>
+	</p>
+
+	<p>
+	  <strong><%= I18n.t("activerecord.attributes.client.phone") %></strong>
+	  <%= @client.phone %>
+	</p>
+
+	<button class="btn btn-secondary btn-xs" type="button"><%= link_to I18n.t("links.edit"), edit_client_path(@client) %></button> |
+	<button class="btn btn-secondary btn-xs" type="button"><%= link_to I18n.t("links.back"), clients_path %></button>
+</div>

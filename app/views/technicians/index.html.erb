@@ -1,0 +1,33 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <h1><%= I18n.t("menus.techList") %></h1>
+
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th><%= I18n.t("activerecord.attributes.technician.name") %></th>
+        <th><%= I18n.t("activerecord.attributes.technician.address") %></th>
+        <th><%= I18n.t("activerecord.attributes.technician.phone") %></th>
+        <th colspan="3"><%=I18n.t("menus.options")%></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @technicians.each do |technician| %>
+        <tr>
+          <td><%= technician.name %></td>
+          <td><%= technician.address %></td>
+          <td><%= technician.phone %></td>
+          <td align="center"><button class="btn btn-default btn-xs" type="button"><%= link_to I18n.t("links.show"), technician %></button> 
+          <button class="btn btn-default btn-xs" type="button"><%= link_to I18n.t("links.edit"), edit_technician_path(technician) %></button> 
+          <button class="btn btn-default btn-xs" type="button"><%= link_to I18n.t("links.destroy"), technician, method: :delete, data: { confirm: I18n.t("links.confirm") } %></button></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <button class="btn btn-default" type="button"><%= link_to I18n.t("links.newTechnician"), new_technician_path %></button>
+</div>

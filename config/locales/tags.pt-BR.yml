@@ -1,0 +1,22 @@
+pt-BR:
+    links:
+        edit: Editar
+        show: Exibir
+        destroy: Excluir
+        back: Voltar
+        newService: Nova ordem de serviço
+        newTechnician: Novo técnico
+        newClient: Novo cliente
+        confirm: Você tem certeza?
+        error: erro
+    menus:
+        serviceList: Ordens de serviço
+        newService: Nova OS
+        editServ: Editar OS
+        techList: Técnicos
+        newTechnician: Novo Técnico
+        editTech: Editar técnico
+        clientList: Clientes
+        newClient: Novo Cliente
+        editClient: Editar Cliente
+        options: Opções

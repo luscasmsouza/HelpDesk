@@ -1,0 +1,22 @@
+pt-BR:
+    activerecord:
+        models:
+            technician: Técnico
+            client: Cliente 
+            service: Ordem de Serviço
+        attributes:
+            technician:
+                name: Nome
+                address: Endereço
+                phone: Telefone
+            client:
+                compname: Razão Social
+                address: Endereço
+                phone: Telefone
+            service:
+                id: Num   
+                description: Descrição   
+                date: Data   
+                time: Hora   
+                technician: Técnico   
+                client: Cliente   

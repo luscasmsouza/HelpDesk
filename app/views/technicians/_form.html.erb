@@ -1,0 +1,31 @@
+<div class="container">
+  <%= form_for(@technician) do |f| %>
+    <% if @technician.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@technician.errors.count, I18n.t("links.error"))%> <%= I18n.t("general.validationerror") %>:</h2>
+
+        <ul>
+        <% @technician.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :address %><br>
+      <%= f.text_field :address %>
+    </div>
+    <div class="field">
+      <%= f.label :phone %><br>
+      <%= f.number_field :phone %>
+    </div>
+    <div class="actions">
+      <%= f.submit type: 'submit', class: 'btn btn-default' %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,31 @@
+<div class="container">
+  <%= form_for(@client) do |f| %>
+    <% if @client.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@client.errors.count, I18n.t("links.error"))%> <%= I18n.t("general.validationerror") %>:</h2>
+
+        <ul>
+        <% @client.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :compname %><br>
+      <%= f.text_field :compname %>
+    </div>
+    <div class="field">
+      <%= f.label :address %><br>
+      <%= f.text_field :address %>
+    </div>
+    <div class="field">
+      <%= f.label :phone %><br>
+      <%= f.number_field :phone %>
+    </div>
+    <div class="actions">
+      <%= f.submit class: 'btn btn-default', type: 'submit'%>
+    </div>
+  <% end %>
+</div>

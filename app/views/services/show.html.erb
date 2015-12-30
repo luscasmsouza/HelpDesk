@@ -1,0 +1,35 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong><%= I18n.t("activerecord.attributes.service.id") %></strong>
+    <%= @service.id %>
+  </p>
+  <p>
+    <strong><%= I18n.t("activerecord.attributes.service.description") %></strong>
+    <%= @service.description %>
+  </p>
+
+  <p>
+    <strong><%= I18n.t("activerecord.attributes.service.date") %></strong>
+    <%= @service.date %>
+  </p>
+
+  <p>
+    <strong><%= I18n.t("activerecord.attributes.service.time") %></strong>
+    <%= @service.time.strftime("%I:%M%p") %>
+  </p>
+
+  <p>
+    <strong><%= I18n.t("activerecord.attributes.service.client") %></strong>
+    <%= @service.client.compname %>
+  </p>
+
+  <p>
+    <strong><%= I18n.t("activerecord.attributes.service.technician") %></strong>
+    <%= @service.technician.name %>
+  </p>
+
+  <button class="btn btn-secondary btn-xs" type="button"><%= link_to I18n.t("links.edit"), edit_service_path(@service) %></button> |
+  <button class="btn btn-secondary btn-xs" type="button"><%= link_to I18n.t("links.back"), services_path %></button>
+</div>

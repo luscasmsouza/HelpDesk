@@ -1,0 +1,6 @@
+pt-BR:
+    index:
+        helpdesk: Sistema de Help Desk
+        description: 'Este é um sistema de controle de chamados técnicos. Nele é possível fazer cadastros e consultas de técnicos, clientes e ordens de serviço.'
+    general:
+        validationerror: encontrado(s). Verifique os campos e tente novamente
